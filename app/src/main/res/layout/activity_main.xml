@@ -26,7 +26,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/purple_500"
             app:popupTheme="@style/Theme.WhatsnextHomescreen.PopupOverlay"
             android:background="@android:color/holo_green_dark"
             />
