@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">What\'s Next!?</string>
+    <string name="action_settings">Instellingen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Testkast</string>
+    <string name="Kast">Kast</string>
+    <string name="previous">Terug</string>
+    <string name="CamButton">Scan</string>
+    <string name="hello_first_fragment">Klik hieronder om naar je kast te gaan</string>
+    <string name="hello_second_fragment">hier komt de kast</string>
+    <string name="stringadd_item">Add Item</string>
+    <string name="kastInstNaam">Kast instellen</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">General settings</string>
+
+
+    <!-- Messages Preferences -->
+
+
+    <!-- Alert Preferences -->
+    <string name="alerts_off">U zal geen meldingen ontvangen</string>
+    <string name="alerts_on">U zal meldingen ontvangen</string>
+    <string name="alerts_title">Meldingen</string>
+</resources>
