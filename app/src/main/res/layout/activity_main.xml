@@ -14,7 +14,9 @@
         android:enabled="false"
         android:contentDescription="@string/CamButton"
         app:srcCompat="@android:drawable/ic_menu_camera"
-        tools:srcCompat="@android:drawable/ic_menu_camera" />
+        tools:srcCompat="@android:drawable/ic_menu_camera"
+        android:background="@android:color/holo_green_dark"
+        />
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/purple_500"
-            app:popupTheme="@style/Theme.WhatsnextHomescreen.PopupOverlay" />
+            app:popupTheme="@style/Theme.WhatsnextHomescreen.PopupOverlay"
+            android:background="@android:color/holo_green_dark"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -41,7 +45,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_input_add"
-        android:contentDescription="@string/stringadd_item" />
+        android:contentDescription="@string/stringadd_item"
+        app:backgroundTint="@android:color/holo_green_dark"
+        android:background="@android:color/holo_green_dark"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

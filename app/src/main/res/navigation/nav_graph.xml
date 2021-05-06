@@ -40,4 +40,5 @@
             android:id="@+id/action_settingsFragment_to_FirstFragment"
             app:destination="@id/home" />
     </fragment>
+
 </navigation>
