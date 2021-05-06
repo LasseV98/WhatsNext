@@ -1,0 +1,6 @@
+<?php
+    define('DB_NAME','ID328544_whatsnext')
+    define('DB_USER','ID328544_whatsnext')
+     define('DB_PASSWORD','Whatsnext-21')
+     define('DB_HOST','ID328544_whatsnext.db.webhosting.be')
+     ?>
