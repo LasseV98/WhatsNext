@@ -22,4 +22,24 @@
     <string name="alerts_off">U zal geen meldingen ontvangen</string>
     <string name="alerts_on">U zal meldingen ontvangen</string>
     <string name="alerts_title">Meldingen</string>
+    <string name="contactnaam">contactnaam</string>
+    <string name="contactmail">contactmail</string>
+    <string name="bericht">bericht</string>
+    <string name="onderwerp">onderwerp</string>
+    <string name="verstuur_kopie_naar_mijn_e_mail">verstuur_kopie_naar_mijn_e_mail</string>
+    <string name="verstuur_bericht">verstuur_bericht</string>
+    <string name="logobalk_contactpagina">logobalk_contactpagina</string>
+    <string name="voer_wachtwoord_opniuew_in">voer wachtwoord opniuew in</string>
+    <string name="naam_nieuwe_gebruiker">naam_nieuwe_gebruiker</string>
+    <string name="bovenbalknieuwegebruiker">bovenbalknieuwegebruiker</string>
+    <string name="wachtwoord">wachtwoord</string>
+    <string name="mail">mail</string>
+    <string name="maak_account_aan">maak account aan</string>
+    <string name="voer_uw_wachtwoord_opnieuw_in">voer uw wachtwoord opnieuw in</string>
+    <string name="naam">naam</string>
+    <string name="achtergrond_inlogpagina">achtergrond_inlogpagina</string>
+    <string name="gebruikersmail">gebruikersmail</string>
+    <string name="wachtwoord">wachtwoord</string>
+    <string name="nieuwe_gebruiker_aanmaken">nieuwe gebruiker aanmaken</string>
+    <string name="aanmelden">aanmelden</string>
 </resources>

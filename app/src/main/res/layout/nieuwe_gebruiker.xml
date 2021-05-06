@@ -31,7 +31,7 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
-        android:hint="@string/wachtwoord_opnieuw_in"
+        android:hint="@string/voer_uw_wachtwoord_opnieuw_in"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
-        android:hint="@string/naam_nieuwe_gebruiker"
+        android:hint="@string/naam"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/nieuwegebruiker_bovenstebalk"
+        android:id="@+id/bovenbalk_niuwegebruiker"
         android:layout_width="416dp"
         android:layout_height="100dp"
         android:contentDescription="@string/bovenbalknieuwegebruiker"
@@ -89,7 +89,7 @@
         android:layout_marginBottom="150dp"
         android:backgroundTint="#4CAF50"
         android:gravity="center"
-        android:text="@string/maak_account_aan"
+        android:hint="@string/maak_account_aan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.282"
