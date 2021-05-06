@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+
+    <ImageView
+        android:id="@+id/achtergrondinloggen"
+        android:layout_width="511dp"
+        android:layout_height="812dp"
+        android:contentDescription="@string/inlogpagina"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
+        app:srcCompat="@drawable/loginpagina" />
+
+    <EditText
+        android:id="@+id/anmelden_nieuwegebruiker"
+        android:layout_width="337dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginBottom="281dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/gebruikersmail"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="338dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="121dp"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/passwoord"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/nieuwegebruiker"
+        android:layout_width="233dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#4CAF50"
+        android:text="@string/nieuwegebruiker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/aanmelden"
+        android:layout_width="233dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#4CAF50"
+        android:text="@string/aanmelden"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
