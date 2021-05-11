@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/achtergrondinloggen"
+        android:id="@+id/pagina_login"
         android:layout_width="511dp"
         android:layout_height="812dp"
         android:contentDescription="@string/achtergrond_inlogpagina"

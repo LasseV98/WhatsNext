@@ -1,6 +1,43 @@
 <?php
-    define('DB_NAME','ID328544_whatsnext')
-    define('DB_USER','ID328544_whatsnext')
-     define('DB_PASSWORD','Whatsnext-21')
-     define('DB_HOST','ID328544_whatsnext.db.webhosting.be')
-     ?>
+
+function connectWithDB(){
+    $dbHost = "ID328544_whatsnext.db.webhosting.be";
+    $dbUsername = "ID328544_whatsnext";
+    $dbPassword = "Whatsnext-21";
+    $dbName = "ID328544_whatsnext";
+
+    $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+
+    if ($conn == false ){
+    die("connection failed");
+    }
+    return $conn;
+}
+
+$conn = connectWithDB();
+
+
+/*
+// prpere the sql
+
+$sql = "SELECT * FROM gebruikers";
+
+$result = mysqli_query($conn, $sql);
+
+$gebruikers = $result ->fetch_all(MYSQLI_ASSOC);
+
+*/
+
+function getQuery($sql){
+    // connection with database
+    $conn = connectWithDB();
+    // sql statment
+
+
+    // fetching result
+    $result = mysqli_query($conn, $sql);
+
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+
