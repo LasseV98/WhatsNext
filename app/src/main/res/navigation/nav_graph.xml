@@ -12,7 +12,7 @@
         >
         <action
             android:id="@+id/NaarAanmelden"
-            app:destination="pagina_login"
+            app:destination="@+id/pagina_login"
             />
     </fragment>
     <!-- kotlin file aanmaken-->
