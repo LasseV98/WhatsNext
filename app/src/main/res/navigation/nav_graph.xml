@@ -8,10 +8,26 @@
     <fragment
         android:id="@+id/pagina_nieuwegebruiker"
         android:name="com.whatsnextfood.whatsnexthomescreen.dummy.loginPagina"
+        tools:layout="@layout/nieuwe_gebruiker"
+        >
+        <action
+            android:id="@+id/NaarAanmelden"
+            app:destination="pagina_login"
+            />
+    </fragment>
+    <!-- kotlin file aanmaken-->
+    <fragment
+        android:id="@+id/pagina_login"
         tools:layout="@layout/login_pagina"
         >
-    </fragment>
+        <action
+            android:id="@+id/LoginNaarHome"
+            app:destination="@id/home"
+            >
 
+        </action>
+
+    </fragment>
 
     <fragment
         android:id="@+id/home"
