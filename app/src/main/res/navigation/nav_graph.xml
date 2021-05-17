@@ -6,6 +6,12 @@
     app:startDestination="@id/home">
 
     <fragment
+        android:id="@+id/pagina_nieuwegebruiker">
+        <!-- Messages Preferences -->
+    </fragment>
+
+
+    <fragment
         android:id="@+id/home"
         android:name="com.whatsnextfood.whatsnexthomescreen.FirstFragment"
         android:label="@string/first_fragment_label"
