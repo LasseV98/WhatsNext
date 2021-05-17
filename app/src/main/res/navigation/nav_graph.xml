@@ -6,8 +6,10 @@
     app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/pagina_nieuwegebruiker">
-        <!-- Messages Preferences -->
+        android:id="@+id/pagina_nieuwegebruiker"
+        android:name="com.whatsnextfood.whatsnexthomescreen.dummy.loginPagina"
+        tools:layout="@layout/login_pagina"
+        >
     </fragment>
 
 
