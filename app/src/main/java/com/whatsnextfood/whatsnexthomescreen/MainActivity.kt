@@ -23,11 +23,19 @@ import com.google.zxing.integration.android.IntentIntegrator
 
 class MainActivity : AppCompatActivity() {
 
+
 //permissions vragen en scan aanzetten
  override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
+
+
+
+
+
+
+
+
 
         setSupportActionBar(findViewById(R.id.toolbar))
         if(ActivityCompat.checkSelfPermission(this,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
