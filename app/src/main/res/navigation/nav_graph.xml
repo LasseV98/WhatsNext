@@ -6,6 +6,14 @@
     app:startDestination="@id/home">
 
     <fragment
+        android:id="@+id/pagina_nieuwegebruiker"
+        android:name="com.whatsnextfood.whatsnexthomescreen.dummy.loginPagina"
+        tools:layout="@layout/login_pagina"
+        >
+    </fragment>
+
+
+    <fragment
         android:id="@+id/home"
         android:name="com.whatsnextfood.whatsnexthomescreen.FirstFragment"
         android:label="@string/first_fragment_label"

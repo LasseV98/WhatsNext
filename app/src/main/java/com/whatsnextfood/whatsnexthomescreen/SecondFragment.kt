@@ -23,7 +23,8 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        //dit zoekt de button(id) en de action in nav_graph.xml
+        //bij findNavController zoek je expliciet welke actie je wilt doen
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().navigate(R.id.kastNaarMain)
         }

@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/loginpagina" />
 
     <EditText
-        android:id="@+id/anmelden_nieuwegebruiker"
+        android:id="@+id/aanmelden_nieuwegebruiker"
         android:layout_width="337dp"
         android:layout_height="81dp"
         android:layout_marginStart="35dp"

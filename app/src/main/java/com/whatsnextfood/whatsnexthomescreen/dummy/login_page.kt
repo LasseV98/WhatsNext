@@ -12,4 +12,4 @@ class loginPage {
 
         view.findViewById<Button>(R.id.nieuwegebruiker).setOnClickListener {
             findNavController().navigate(R.id.pagina_nieuwegebruiker)
-        }
+}
