@@ -3,16 +3,16 @@ package com.whatsnextfood.whatsnexthomescreen;
 public class connectie {
 
     private int id;
-    private String name;
-    private int age;
+    private String productNaam;
+    private int aantal;
     private boolean isActive;
 
     //constructors
 
-    public connectie(int id, String name, int age, boolean isActive) {
+    public connectie(int id, String productNaam, int aantal, boolean isActive) {
         this.id = id;
-        this.name = name;
-        this.age = age;
+        this.productNaam = productNaam;
+        this.aantal = aantal;
         this.isActive = isActive;
     }
 
@@ -25,8 +25,8 @@ public class connectie {
     public String toString() {
         return "connectie{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
+                ", naam='" + productNaam + '\'' +
+                ", aantal=" + aantal +
                 ", isActive=" + isActive +
                 '}';
     }
@@ -42,20 +42,20 @@ public class connectie {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNaam() {
+        return productNaam;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNaam(String productNaam) {
+        this.productNaam = productNaam;
     }
 
-    public int getAge() {
-        return age;
+    public int getAantal() {
+        return aantal;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAantal(int age) {
+        this.aantal = aantal;
     }
 
     public boolean isActive() {
