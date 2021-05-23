@@ -107,4 +107,5 @@ class MainActivity : AppCompatActivity() {
     private fun goToPrefenceActivity(){
         startActivity(Intent(this,SettingsFragment::class.java))
     }
+
 }
