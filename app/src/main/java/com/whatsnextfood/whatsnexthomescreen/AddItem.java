@@ -37,7 +37,7 @@ public class AddItem extends AppCompatActivity {
                 ProductModel productModel;
 
                 try {
-                    productModel = new ProductModel(-1, et_naam.getText().toString(), Integer.parseInt(et_aantal.getText().toString()), sw_verpakt.isChecked())
+                    productModel = new ProductModel(-1, et_naam.getText().toString(), Integer.parseInt(et_aantal.getText().toString()), sw_verpakt.isChecked());
                     Toast.makeText(AddItem.this, productModel.toString(), Toast.LENGTH_SHORT).show();
                 }
                 catch (Exception e){
