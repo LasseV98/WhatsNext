@@ -24,7 +24,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // crasht nog (omdat pagina niet bestaat)
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
+        view.findViewById<Button>(R.id.Add_Item).setOnClickListener {
             findNavController().navigate(R.id.HomeToKast)
         }
     }
