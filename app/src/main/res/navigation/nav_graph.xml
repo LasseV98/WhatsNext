@@ -36,11 +36,11 @@
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/HomeToKast"
-            app:destination="@id/kast" />
-        <action
             android:id="@+id/action_FirstFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/HomeToKast"
+            app:destination="@id/kast" />
     </fragment>
 
     <fragment
