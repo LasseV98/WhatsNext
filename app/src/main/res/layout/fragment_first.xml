@@ -24,7 +24,7 @@
       android:layout_marginEnd="8dp"
       android:layout_marginBottom="58dp"
       android:background="@drawable/roundstyle"
-      android:text="+"
+      android:text="@string/Add_item"
       android:textSize="34sp"
       app:backgroundTint="@android:color/holo_green_dark"
       app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +55,7 @@
         android:layout_marginStart="125dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="125dp"
-        android:text="Welkom bij What's Next!?"
+        android:text="@string/Welkom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

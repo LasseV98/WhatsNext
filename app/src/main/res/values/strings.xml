@@ -54,4 +54,6 @@
     <string name="ProductNaam">Product naam</string>
     <string name="ProductAantal">Aantal</string>
     <string name="ProductVerpakt">Verpakt</string>
+    <string name="Add_item">+</string>
+    <string name="Welkom">Welkom bij What\'s Next!?</string>
 </resources>
