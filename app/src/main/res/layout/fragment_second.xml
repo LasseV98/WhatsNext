@@ -15,7 +15,9 @@
         android:layout_marginBottom="36dp"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@android:color/holo_green_dark"
+        android:background="@android:color/holo_green_dark"/>
 
     <EditText
         android:id="@+id/et_naam"
@@ -60,6 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        app:backgroundTint="@android:color/holo_green_dark"
+        android:background="@android:color/holo_green_dark"
         android:text="VIEW ALL"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +76,9 @@
         android:text="ADD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_viewAll"
-        app:layout_constraintTop_toTopOf="@+id/btn_viewAll" />
+        app:layout_constraintTop_toTopOf="@+id/btn_viewAll"
+        app:backgroundTint="@android:color/holo_green_dark"
+        android:background="@android:color/holo_green_dark"/>
 
     <ListView
         android:id="@+id/lv_productList"

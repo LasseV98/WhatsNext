@@ -1,6 +1,6 @@
 package com.whatsnextfood.whatsnexthomescreen;
 
-public class connectie {
+public class ProductModel {
 
     private int id;
     private String productNaam;
@@ -9,14 +9,14 @@ public class connectie {
 
     //constructors
 
-    public connectie(int id, String productNaam, int aantal, boolean isActive) {
+    public ProductModel(int id, String productNaam, int aantal, boolean isActive) {
         this.id = id;
         this.productNaam = productNaam;
         this.aantal = aantal;
         this.isActive = isActive;
     }
 
-    public connectie() {
+    public ProductModel() {
     }
 
     //toString is necessary for printing the contents of a class object
@@ -42,9 +42,7 @@ public class connectie {
         this.id = id;
     }
 
-    public String getNaam() {
-        return productNaam;
-    }
+    public String getNaam() { return productNaam; }
 
     public void setNaam(String productNaam) {
         this.productNaam = productNaam;
@@ -66,3 +64,4 @@ public class connectie {
         isActive = active;
     }
 }
+
