@@ -46,8 +46,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
-
-        return true;
     }
 
 }
