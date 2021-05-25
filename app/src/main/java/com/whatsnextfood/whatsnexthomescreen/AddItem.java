@@ -45,7 +45,7 @@ public class AddItem extends AppCompatActivity {
                     productModel = new ProductModel(-1, "error", 0, false);
                 }
 
-                DataBaseHelper dataBaseHelper = new DataBaseHelper(fragment_second.this);
+                DataBaseHelper dataBaseHelper = new DataBaseHelper(AddItem.this);
 
                 boolean success = dataBaseHelper.addOne(productModel);
                 Toast.makeText(AddItem.this, "Success" + success, Toast.LENGTH_SHORT).show();
