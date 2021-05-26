@@ -60,7 +60,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         // 1 u 2 en 23 herbekijken er is een fout hieronder
-       Cursor cursor =  db.rawQuery(queryString);
+       Cursor cursor =  db.rawQuery(queryString, null);
 
        if (cursor.moveToFirst()){
            //lopen door de curser ( resultaat set) en crate new product opbject , we zetten het  in een lijst
@@ -79,17 +79,19 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                boolean productVerpakt = cursor.getInt(3) == 1? true: false;
 
                ProductModel newProduct = new ProductModel(productID, productNaam,productAantal, productVerpakt);
-
+               returnList.add(newProduct);
 
 
            }while (cursor.moveToFirst());
        }
 
        else {
+           //geen reslutaten database. Niks toevoegen list
 
        }
-
-
+       //curusor en db sluiten op einde
+        cursor.close();
+        db.close();
         return returnList;
     }
 
