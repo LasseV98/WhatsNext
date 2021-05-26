@@ -2,10 +2,14 @@ package com.whatsnextfood.whatsnexthomescreen;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
@@ -46,6 +50,26 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
+    }
+
+    public List <ProductModel> getAll(){
+        List<ProductModel>returnList = new ArrayList<>();
+
+        //data uit de database
+        String queryString = "SELECT * FROM" + PRODUCT_TABLE;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // 1 u 2 en 23 herbekijken er is een fout hieronder
+       Cursor cursor =  db.rawQuery(queryString);
+
+       if (cursor.moveToFirst()){
+           //lopen door de curser ( resultaat set) en crate new product opbject , we zetten heb min een lijst
+       }
+
+
+
+
+        return returnList;
     }
 
 }

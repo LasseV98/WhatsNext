@@ -28,6 +28,7 @@ public class AddItem extends AppCompatActivity {
         et_aantal = findViewById(R.id.et_aantal);
         et_naam = findViewById(R.id.et_naam);
         sw_verpakt = findViewById(R.id.sw_verpakt);
+        lv_productList =findViewById((R.id.lv_productList));
 
         //button listeners
         btn_add.setOnClickListener(new View.OnClickListener() {

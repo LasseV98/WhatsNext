@@ -23,7 +23,7 @@ public class ProductModel {
 
     @Override
     public String toString() {
-        return "connectie{" +
+        return "ProductModel{" +
                 "id=" + id +
                 ", naam='" + productNaam + '\'' +
                 ", aantal=" + aantal +

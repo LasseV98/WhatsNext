@@ -13,11 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="36dp"
+        android:background="@android:color/holo_green_dark"
         android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:backgroundTint="@android:color/holo_green_dark"
-        android:background="@android:color/holo_green_dark"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/et_naam"
@@ -26,6 +26,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/ProductNaam"
         android:inputType="textPersonName"
@@ -38,47 +39,39 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/ProductAantal"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_naam" />
-
-    <Switch
-        android:id="@+id/sw_verpakt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/ProductVerpakt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_aantal" />
 
     <Button
         android:id="@+id/btn_viewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:backgroundTint="@android:color/holo_green_dark"
+        android:layout_marginTop="157dp"
         android:background="@android:color/holo_green_dark"
-        android:text="VIEW ALL"
+        android:text="@string/view_all"
+        app:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sw_verpakt" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/add"
+        app:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_viewAll"
-        app:layout_constraintTop_toTopOf="@+id/btn_viewAll"
-        app:backgroundTint="@android:color/holo_green_dark"
-        android:background="@android:color/holo_green_dark"/>
+        app:layout_constraintTop_toTopOf="@+id/btn_viewAll" />
 
     <ListView
         android:id="@+id/lv_productList"
@@ -90,5 +83,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_viewAll" />
+
+    <Switch
+        android:id="@+id/sw_verpakt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="574dp"
+        android:text="@string/verpakt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Verpakt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

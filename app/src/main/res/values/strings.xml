@@ -56,4 +56,12 @@
     <string name="ProductVerpakt">Verpakt</string>
     <string name="Add_item">+</string>
     <string name="Welkom">Welkom bij What\'s Next!?</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="add">ADD</string>
+    <string name="productverpakt">ProductVerpakt</string>
+    <string name="verpakt">Verpakt</string>
+
+
+
+
 </resources>
