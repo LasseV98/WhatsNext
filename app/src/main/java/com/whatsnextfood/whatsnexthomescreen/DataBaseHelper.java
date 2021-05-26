@@ -82,7 +82,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                returnList.add(newProduct);
 
 
-           }while (cursor.moveToFirst());
+           }while (cursor.moveToNext());
        }
 
        else {

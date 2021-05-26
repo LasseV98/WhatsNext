@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 public class AddItem extends AppCompatActivity {
 
     //references of layout
@@ -53,11 +55,11 @@ public class AddItem extends AppCompatActivity {
             }
         });
 
-        btn_viewAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(AddItem.this, "View button", Toast.LENGTH_SHORT).show();
-            }
+        btn_viewAll.setOnClickListener((v) ->{
+            DataBaseHelper dataBaseHelper = new DataBaseHelper(AddItem.this);
+            List<ProductModel>all = dataBaseHelper.getAll();
+                Toast.makeText(AddItem.this, all.toString(),Toast.LENGTH_SHORT).show();
+
         });
     }
 }
