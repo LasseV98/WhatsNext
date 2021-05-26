@@ -64,6 +64,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
        if (cursor.moveToFirst()){
            //lopen door de curser ( resultaat set) en crate new product opbject , we zetten heb min een lijst
+           do {
+               int productID= cursor.getInt(0);
+               String productNaam = cursor.getString(1);
+               int procuctAantal = cursor.getInt(2);
+               boolean productVerpakt = cursor.getInt(3) == 1? true;
+
+
+
+           }while (cursor.moveToFirst());
        }
 
 
