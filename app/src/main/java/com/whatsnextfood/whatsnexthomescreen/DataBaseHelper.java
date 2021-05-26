@@ -58,7 +58,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String queryString = "Delete FROM" + PRODUCT_TABLE + "where " + COLUMN_ID + " = " + productModel.getId();
 
-        db.rawQuery()
+        Cursor cursor = db.rawQuery(queryString, null);
+
+        if (cursor.moveToFirst()){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
     public List <ProductModel> getAll(){
