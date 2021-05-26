@@ -63,21 +63,31 @@ public class DataBaseHelper extends SQLiteOpenHelper {
        Cursor cursor =  db.rawQuery(queryString);
 
        if (cursor.moveToFirst()){
-           //lopen door de curser ( resultaat set) en crate new product opbject , we zetten heb min een lijst
+           //lopen door de curser ( resultaat set) en crate new product opbject , we zetten het  in een lijst
            do {
                int productID= cursor.getInt(0);
                String productNaam = cursor.getString(1);
-               int procuctAantal = cursor.getInt(2);
+               int productAantal = cursor.getInt(2);
 
+                //Tiernary operator if statment in compacte vorm
 
+               // if (Expresion){
+               // variable=  expression2 }
+
+               // else{
+               // variable = Expression3;}
                boolean productVerpakt = cursor.getInt(3) == 1? true: false;
+
+               ProductModel newProduct = new ProductModel(productID, productNaam,productAantal, productVerpakt);
 
 
 
            }while (cursor.moveToFirst());
        }
 
+       else {
 
+       }
 
 
         return returnList;
