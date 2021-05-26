@@ -37,10 +37,9 @@ public class AddItem extends AppCompatActivity {
         lv_productList =findViewById((R.id.lv_productList));
 
 
-        productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper.getAll());
-        lv_productList.setAdapter(productArrayAdapter);
+        ShowProductOnListView(dataBaseHelper);
 
-         dataBaseHelper = new DataBaseHelper(AddItem.this);
+        dataBaseHelper = new DataBaseHelper(AddItem.this);
 
         //button listeners
         btn_add.setOnClickListener(new View.OnClickListener() {
@@ -63,19 +62,22 @@ public class AddItem extends AppCompatActivity {
                 boolean success = dataBaseHelper.addOne(productModel);
 
                 Toast.makeText(AddItem.this, "Success" + success, Toast.LENGTH_SHORT).show();
-                productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper.getAll());
-                lv_productList.setAdapter(productArrayAdapter);
+                ShowProductOnListView(dataBaseHelper);
             }
         });
 
         btn_viewAll.setOnClickListener((v) ->{
             DataBaseHelper dataBaseHelper = new DataBaseHelper(AddItem.this);
 
-            productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper.getAll());
-            lv_productList.setAdapter(productArrayAdapter);
+            ShowProductOnListView(dataBaseHelper);
 
             //Toast.makeText(AddItem.this, all.toString(),Toast.LENGTH_SHORT).show();
 
         });
+    }
+
+    private void ShowProductOnListView(DataBaseHelper dataBaseHelper2) {
+        productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper2.getAll());
+        lv_productList.setAdapter(productArrayAdapter);
     }
 }

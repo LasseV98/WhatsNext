@@ -52,6 +52,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    public boolean deleteOne(ProductModel productModel){
+        // find cm in the database. if fount delete it and retun true
+        // als het niet gevonden is return False
+        SQLiteDatabase db = this.getWritableDatabase();
+        String queryString = "Delete FROM" + PRODUCT_TABLE + "where " + COLUMN_ID + " = " + productModel.getId();
+
+        db.rawQuery()
+    }
+
     public List <ProductModel> getAll(){
         List<ProductModel>returnList = new ArrayList<>();
 
