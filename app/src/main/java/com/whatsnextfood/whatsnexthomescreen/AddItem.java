@@ -2,6 +2,7 @@ package com.whatsnextfood.whatsnexthomescreen;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -19,6 +20,9 @@ public class AddItem extends AppCompatActivity {
     EditText et_naam, et_aantal;
     Switch sw_verpakt;
     ListView lv_productList;
+    ArrayAdapter productArrayAdapter;
+
+    DataBaseHelper dataBaseHelper ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,12 @@ public class AddItem extends AppCompatActivity {
         et_naam = findViewById(R.id.et_naam);
         sw_verpakt = findViewById(R.id.sw_verpakt);
         lv_productList =findViewById((R.id.lv_productList));
+
+
+        productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper.getAll());
+        lv_productList.setAdapter(productArrayAdapter);
+
+         dataBaseHelper = new DataBaseHelper(AddItem.this);
 
         //button listeners
         btn_add.setOnClickListener(new View.OnClickListener() {
@@ -51,14 +61,20 @@ public class AddItem extends AppCompatActivity {
                 DataBaseHelper dataBaseHelper = new DataBaseHelper(AddItem.this);
 
                 boolean success = dataBaseHelper.addOne(productModel);
+
                 Toast.makeText(AddItem.this, "Success" + success, Toast.LENGTH_SHORT).show();
+                productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper.getAll());
+                lv_productList.setAdapter(productArrayAdapter);
             }
         });
 
         btn_viewAll.setOnClickListener((v) ->{
             DataBaseHelper dataBaseHelper = new DataBaseHelper(AddItem.this);
-            List<ProductModel>all = dataBaseHelper.getAll();
-                Toast.makeText(AddItem.this, all.toString(),Toast.LENGTH_SHORT).show();
+
+            productArrayAdapter = new ArrayAdapter<ProductModel>(AddItem.this, android.R.layout.simple_list_item_1, dataBaseHelper.getAll());
+            lv_productList.setAdapter(productArrayAdapter);
+
+            //Toast.makeText(AddItem.this, all.toString(),Toast.LENGTH_SHORT).show();
 
         });
     }
