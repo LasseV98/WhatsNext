@@ -24,8 +24,8 @@
             android:id="@+id/action_FirstFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
         <action
-            android:id="@+id/HomeToKast"
-            app:destination="@id/kast" />
+            android:id="@+id/action_home_to_product_toevoegen"
+            app:destination="@id/product_toevoegen" />
     </fragment>
 
     <fragment

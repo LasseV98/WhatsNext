@@ -25,7 +25,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // crasht nog (omdat pagina niet bestaat)
         view.findViewById<Button>(R.id.Add_Item).setOnClickListener {
-            findNavController().navigate(R.id.HomeToKast)
+            findNavController().navigate(R.id.product_toevoegen)
         }
     }
 }
