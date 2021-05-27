@@ -30,7 +30,6 @@ class AddItems : AppCompatActivity() {
 
 
         //button listeners
-        //button listeners
         btn_add.setOnClickListener(View.OnClickListener {
             var productModel: ProductModel
             try {
