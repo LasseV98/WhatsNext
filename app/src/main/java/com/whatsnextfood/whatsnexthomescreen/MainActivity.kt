@@ -30,14 +30,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
-
-
-
-
-
         setSupportActionBar(findViewById(R.id.toolbar))
         if(ActivityCompat.checkSelfPermission(this,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA),111)
@@ -54,6 +46,10 @@ class MainActivity : AppCompatActivity() {
             scanfunctie.setBarcodeImageEnabled(true)
             scanfunctie.initiateScan()
         }
+    val button: Button = findViewById(R.id.Add_Item)
+    button.setOnClickListener {
+        startActivity(Intent(this@MainActivity, AddItem::class.java))
+    }
     }
     //nagaan of je de results krijgt
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -105,10 +101,4 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-    private fun goToPrefenceActivity(){
-        startActivity(Intent(this,SettingsFragment::class.java))
-    }
-
-
-
 }
