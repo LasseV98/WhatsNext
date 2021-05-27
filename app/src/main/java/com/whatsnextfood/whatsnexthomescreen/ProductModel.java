@@ -3,16 +3,16 @@ package com.whatsnextfood.whatsnexthomescreen;
 public class ProductModel {
 
     private int id;
-    private String productNaam;
-    private int aantal;
+    private String productName;
+    private int number;
     private boolean isActive;
 
     //constructors
 
-    public ProductModel(int id, String productNaam, int aantal, boolean isActive) {
+    public ProductModel(int id, String productName, int number, boolean isActive) {
         this.id = id;
-        this.productNaam = productNaam;
-        this.aantal = aantal;
+        this.productName = productName;
+        this.number = number;
         this.isActive = isActive;
     }
 
@@ -25,14 +25,13 @@ public class ProductModel {
     public String toString() {
         return "ProductModel{" +
                 "id=" + id +
-                ", naam='" + productNaam + '\'' +
-                ", aantal=" + aantal +
+                ", name='" + productName + '\'' +
+                ", number=" + number +
                 ", isActive=" + isActive +
                 '}';
+
     }
-
-
-    // getters ans setters
+    // getters ans settersd;
 
     public int getId() {
         return id;
@@ -42,18 +41,20 @@ public class ProductModel {
         this.id = id;
     }
 
-    public String getNaam() { return productNaam; }
-
-    public void setNaam(String productNaam) {
-        this.productNaam = productNaam;
+    public String getProductName() {
+        return productName;
     }
 
-    public int getAantal() {
-        return aantal;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public void setAantal(int age) {
-        this.aantal = aantal;
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public boolean isActive() {
@@ -63,5 +64,4 @@ public class ProductModel {
     public void setActive(boolean active) {
         isActive = active;
     }
-}
-
+    }

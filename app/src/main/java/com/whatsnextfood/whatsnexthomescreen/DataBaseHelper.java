@@ -41,8 +41,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(COLUMN_PRODUCT_NAAM, productModel.getNaam());
-        cv.put(COLUMN_PRODUCT_AANTAL, productModel.getAantal());
+        cv.put(COLUMN_PRODUCT_NAAM, productModel.getProductName());
+        cv.put(COLUMN_PRODUCT_AANTAL, productModel.getNumber());
         cv.put(COLUMN_VERPAKT_PRODUCT, productModel.isActive());
 
         long insert = db.insert(PRODUCT_TABLE, null, cv);
@@ -73,7 +73,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         List<ProductModel>returnList = new ArrayList<>();
 
         //data uit de database
-        String queryString = "SELECT * FROM" + PRODUCT_TABLE;
+        String queryString = "SELECT * FROM " + PRODUCT_TABLE;
         SQLiteDatabase db = this.getReadableDatabase();
 
         // 1 u 2 en 23 herbekijken er is een fout hieronder
