@@ -5,29 +5,15 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/home">
 
-    <fragment
-        android:id="@+id/pagina_nieuwegebruiker"
-        android:name="com.whatsnextfood.whatsnexthomescreen.dummy.loginPagina"
-        tools:layout="@layout/nieuwe_gebruiker"
-        >
-        <action
-            android:id="@+id/NaarAanmelden"
-            app:destination="@+id/pagina_login"
-            />
-    </fragment>
     <!-- kotlin file aanmaken-->
+
     <fragment
-        android:id="@+id/pagina_login"
-        tools:layout="@layout/login_pagina"
-        >
-        <action
-            android:id="@+id/LoginNaarHome"
-            app:destination="@id/home"
-            >
+    android:id="@+id/product_toevoegen"
+    android:name="com.whatsnextfood.whatsnexthomescreen.FirstFragment"
+    android:label="@string/first_fragment_label"
+    tools:layout="@layout/product_toevoegen">
 
-        </action>
-
-    </fragment>
+</fragment>
 
     <fragment
         android:id="@+id/home"
@@ -39,8 +25,8 @@
             android:id="@+id/action_FirstFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
         <action
-            android:id="@+id/HomeToKast"
-            app:destination="@id/kast" />
+            android:id="@+id/action_home_to_product_toevoegen"
+            app:destination="@id/product_toevoegen" />
     </fragment>
 
     <fragment
