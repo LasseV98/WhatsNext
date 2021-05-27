@@ -30,7 +30,7 @@ public class AddItem extends AppCompatActivity {
         et_number = findViewById(R.id.et_number);
         et_name = findViewById(R.id.et_name);
         sw_Active = findViewById(R.id.sw_Sealed);
-        lv_productList =findViewById((R.id.lv_productList));
+        lv_productList = findViewById((R.id.lv_productList));
 
 
         // btn listners
