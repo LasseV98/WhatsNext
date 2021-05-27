@@ -29,7 +29,7 @@ public class AddItem extends AppCompatActivity {
         btn_viewAll = findViewById(R.id.btn_viewAll);
         et_number = findViewById(R.id.et_number);
         et_name = findViewById(R.id.et_name);
-        sw_Active = findViewById(R.id.sw_sealed);
+        sw_Active = findViewById(R.id.sw_Sealed);
         lv_productList =findViewById((R.id.lv_productList));
 
 
