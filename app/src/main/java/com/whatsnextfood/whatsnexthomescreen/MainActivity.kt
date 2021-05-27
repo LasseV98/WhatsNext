@@ -41,10 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-    //button voor de plusknop naar een andere xml pagina
-    val button: Button = findViewById(R.id.btn_addItem)
-    button.setOnClickListener {
-        startActivity(Intent(this@MainActivity, AddItem::class.java))
+
     }
     }
     //nagaan of je de results krijgt
