@@ -46,10 +46,9 @@ class MainActivity : AppCompatActivity() {
             scanfunctie.setBarcodeImageEnabled(true)
             scanfunctie.initiateScan()
         }
-
     val button: Button = findViewById(R.id.Add_Item)
     button.setOnClickListener {
-        startActivity(Intent(this@MainActivity, AddItems::class.java))
+        startActivity(Intent(this@MainActivity, AddItem::class.java))
     }
     }
     //nagaan of je de results krijgt

@@ -1,36 +1,38 @@
 package com.whatsnextfood.whatsnexthomescreen;
 
 public class ProductModel {
+
     private int id;
-    private String name;
+    private String productName;
     private int number;
     private boolean isActive;
 
-    //construtor
-    public ProductModel(int id, String name,int number,boolean isActive)   {
+    //constructors
+
+    public ProductModel(int id, String productName, int number, boolean isActive) {
         this.id = id;
-        this.name = name;
+        this.productName = productName;
         this.number = number;
         this.isActive = isActive;
     }
-    public ProductModel() {
 
+    public ProductModel() {
     }
 
-    // to string
-
+    //toString is necessary for printing the contents of a class object
 
     @Override
     public String toString() {
         return "ProductModel{" +
                 "id=" + id +
-                ", name='" + name +
+                ", name='" + productName + '\'' +
                 ", number=" + number +
                 ", isActive=" + isActive +
                 '}';
-    }
 
-    // getters and setters
+    }
+    // getters ans settersd;
+
     public int getId() {
         return id;
     }
@@ -39,12 +41,12 @@ public class ProductModel {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public int getNumber() {
@@ -59,8 +61,7 @@ public class ProductModel {
         return isActive;
     }
 
-    public void setSealed(boolean sealed) {
-        isActive = sealed;
+    public void setActive(boolean active) {
+        isActive = active;
     }
-}
-
+    }
