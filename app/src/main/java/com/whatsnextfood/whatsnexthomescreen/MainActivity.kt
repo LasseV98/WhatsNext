@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-        findViewById<FloatingActionButton>(R.id.Add_Item).setOnClickListener { view ->
+        findViewById<Button>(R.id.Add_Item).setOnClickListener { view ->
             Snackbar.make(view, "Voeg Item toe", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()}
     }
