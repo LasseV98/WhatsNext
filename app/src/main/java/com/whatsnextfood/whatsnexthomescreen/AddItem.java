@@ -16,8 +16,8 @@ public class AddItem extends AppCompatActivity {
 
     //references of layout
     Button btn_add, btn_viewAll;
-    EditText et_naam, et_aantal;
-    Switch sw_verpakt;
+    EditText et_name, et_number;
+    Switch sw_active;
     ListView lv_productList;
 
     @SuppressLint("UseSwitchCompatOrMaterialCode")
@@ -27,9 +27,9 @@ public class AddItem extends AppCompatActivity {
 
         btn_add = findViewById(R.id.btn_add);
         btn_viewAll = findViewById(R.id.btn_viewAll);
-        et_aantal = findViewById(R.id.et_number);
-        et_naam = findViewById(R.id.et_name);
-        sw_verpakt = findViewById(R.id.sw_Sealed);
+        et_number = findViewById(R.id.et_number);
+        et_name = findViewById(R.id.et_name);
+        sw_active = findViewById(R.id.sw_Sealed);
         lv_productList = findViewById(R.id.lv_productList);
 
         // btn listners
