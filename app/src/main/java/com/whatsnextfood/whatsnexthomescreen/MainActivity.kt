@@ -1,25 +1,18 @@
 package com.whatsnextfood.whatsnexthomescreen
 
 import android.Manifest
-import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.provider.MediaStore
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.zxing.integration.android.IntentIntegrator
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +39,10 @@ class MainActivity : AppCompatActivity() {
             scanfunctie.setBarcodeImageEnabled(true)
             scanfunctie.initiateScan()
         }
-    val button: Button = findViewById(R.id.Add_Item)
+
+
+    //button voor de plusknop naar een andere xml pagina
+    val button: Button = findViewById(R.id.btn_addItem)
     button.setOnClickListener {
         startActivity(Intent(this@MainActivity, AddItem::class.java))
     }
@@ -74,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-        findViewById<Button>(R.id.Add_Item).setOnClickListener { view ->
+        findViewById<Button>(R.id.btn_addItem).setOnClickListener { view ->
             Snackbar.make(view, "Voeg Item toe", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()}
     }

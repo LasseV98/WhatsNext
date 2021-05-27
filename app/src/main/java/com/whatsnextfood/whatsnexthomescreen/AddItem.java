@@ -23,7 +23,7 @@ public class AddItem extends AppCompatActivity {
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.product_toevoegen);
+        setContentView(R.layout.activity_main);
 
         btn_add = findViewById(R.id.btn_add);
         btn_viewAll = findViewById(R.id.btn_viewAll);
@@ -51,5 +51,9 @@ public class AddItem extends AppCompatActivity {
 
             }
         });
+
+
+
+
     }
 }

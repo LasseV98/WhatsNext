@@ -41,7 +41,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(COLUMN_PRODUCT_NAAM, productModel.getName());
+        cv.put(COLUMN_PRODUCT_NAAM, productModel.getProductName());
         cv.put(COLUMN_PRODUCT_AANTAL, productModel.getNumber());
         cv.put(COLUMN_VERPAKT_PRODUCT, productModel.isActive());
 
