@@ -27,11 +27,12 @@ public class ProductModel {
                 "id=" + id +
                 ", name='" + productName + '\'' +
                 ", number=" + number +
-                ", isSealed=" + isActive +
+                ", isActive=" + isActive +
                 '}';
-    }
 
-    // getters and setters
+    }
+    // getters ans settersd;
+
     public int getId() {
         return id;
     }
@@ -40,12 +41,12 @@ public class ProductModel {
         this.id = id;
     }
 
-    public String getName() {
+    public String getProductName() {
         return productName;
     }
 
-    public void setName(String name) {
-        this.productName = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public int getNumber() {
@@ -56,11 +57,11 @@ public class ProductModel {
         this.number = number;
     }
 
-    public boolean isSealed() {
+    public boolean isActive() {
         return isActive;
     }
 
-    public void setSealed(boolean sealed) {
-        isActive = sealed;
+    public void setActive(boolean active) {
+        isActive = active;
     }
-}
+    }

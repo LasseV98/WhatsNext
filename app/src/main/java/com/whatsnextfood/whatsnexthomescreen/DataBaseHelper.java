@@ -83,8 +83,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
            //lopen door de curser ( resultaat set) en crate new product opbject , we zetten het  in een lijst
            do {
                int productID= cursor.getInt(0);
-               String productNaam = cursor.getString(1);
-               int productAantal = cursor.getInt(2);
+               String productName = cursor.getString(1);
+               int productNumber = cursor.getInt(2);
 
                 //Tiernary operator if statment in compacte vorm
 
@@ -95,7 +95,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                // variable = Expression3;}
                boolean productVerpakt = cursor.getInt(3) == 1? true: false;
 
-               ProductModel newProduct = new ProductModel(productID, productNaam,productAantal, productVerpakt);
+               ProductModel newProduct = new ProductModel(productID, productName,productNumber, productVerpakt);
                returnList.add(newProduct);
 
 
