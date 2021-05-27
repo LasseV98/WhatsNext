@@ -20,7 +20,7 @@
         android:background="@android:color/holo_green_dark"/>
 
     <EditText
-        android:id="@+id/et_naam"
+        android:id="@+id/et_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_aantal"
+        android:id="@+id/et_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -45,17 +45,17 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_naam" />
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <Switch
-        android:id="@+id/sw_verpakt"
+        android:id="@+id/sw_sealed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/ProductVerpakt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_aantal" />
+        app:layout_constraintTop_toBottomOf="@+id/et_number" />
 
     <Button
         android:id="@+id/btn_viewAll"
@@ -67,7 +67,7 @@
         android:text="VIEW ALL"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sw_verpakt" />
+        app:layout_constraintTop_toBottomOf="@+id/sw_sealed" />
 
     <Button
         android:id="@+id/btn_add"
