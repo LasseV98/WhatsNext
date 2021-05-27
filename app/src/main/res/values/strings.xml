@@ -70,6 +70,7 @@
     <string name="btn_add">Add</string>
     <string name="sw_active">verpakt</string>
     <string name="btn_viewAll">view All</string>
+    <string name="btn_addItem">+</string>
 
 
 </resources>
