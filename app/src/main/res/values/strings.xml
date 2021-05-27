@@ -51,6 +51,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+
+        <!--    voeg nieuw product toe-->
+
+
     <string name="ProductNaam">Product naam</string>
     <string name="ProductAantal">Aantal</string>
     <string name="ProductVerpakt">Verpakt</string>
