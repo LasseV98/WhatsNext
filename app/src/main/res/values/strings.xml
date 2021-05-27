@@ -65,8 +65,11 @@
     <string name="add">ADD</string>
     <string name="productverpakt">ProductVerpakt</string>
     <string name="verpakt">Verpakt</string>
-
-
+    <string name="ProductNumber">Product Number</string>
+    <string name="ProductName">Product Name</string>
+    <string name="btn_add">Add</string>
+    <string name="sw_active">verpakt</string>
+    <string name="btn_viewAll">view All</string>
 
 
 </resources>

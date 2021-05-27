@@ -41,8 +41,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(COLUMN_PRODUCT_NAAM, productModel.getNaam());
-        cv.put(COLUMN_PRODUCT_AANTAL, productModel.getAantal());
+        cv.put(COLUMN_PRODUCT_NAAM, productModel.getName());
+        cv.put(COLUMN_PRODUCT_AANTAL, productModel.getNumber());
         cv.put(COLUMN_VERPAKT_PRODUCT, productModel.isActive());
 
         long insert = db.insert(PRODUCT_TABLE, null, cv);
@@ -73,7 +73,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         List<ProductModel>returnList = new ArrayList<>();
 
         //data uit de database
-        String queryString = "SELECT * FROM" + PRODUCT_TABLE;
+        String queryString = "SELECT * FROM " + PRODUCT_TABLE;
         SQLiteDatabase db = this.getReadableDatabase();
 
         // 1 u 2 en 23 herbekijken er is een fout hieronder
@@ -83,8 +83,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
            //lopen door de curser ( resultaat set) en crate new product opbject , we zetten het  in een lijst
            do {
                int productID= cursor.getInt(0);
-               String productNaam = cursor.getString(1);
-               int productAantal = cursor.getInt(2);
+               String productName = cursor.getString(1);
+               int productNumber = cursor.getInt(2);
 
                 //Tiernary operator if statment in compacte vorm
 
@@ -95,7 +95,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                // variable = Expression3;}
                boolean productVerpakt = cursor.getInt(3) == 1? true: false;
 
-               ProductModel newProduct = new ProductModel(productID, productNaam,productAantal, productVerpakt);
+               ProductModel newProduct = new ProductModel(productID, productName,productNumber, productVerpakt);
                returnList.add(newProduct);
 
 

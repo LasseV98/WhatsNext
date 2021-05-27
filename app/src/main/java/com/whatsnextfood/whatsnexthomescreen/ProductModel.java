@@ -1,39 +1,36 @@
 package com.whatsnextfood.whatsnexthomescreen;
 
 public class ProductModel {
-
     private int id;
-    private String productNaam;
-    private int aantal;
+    private String name;
+    private int number;
     private boolean isActive;
 
-    //constructors
-
-    public ProductModel(int id, String productNaam, int aantal, boolean isActive) {
+    //construtor
+    public ProductModel(int id, String name,int number,boolean isActive)   {
         this.id = id;
-        this.productNaam = productNaam;
-        this.aantal = aantal;
+        this.name = name;
+        this.number = number;
         this.isActive = isActive;
     }
-
     public ProductModel() {
+
     }
 
-    //toString is necessary for printing the contents of a class object
+    // to string
+
 
     @Override
     public String toString() {
         return "ProductModel{" +
                 "id=" + id +
-                ", naam='" + productNaam + '\'' +
-                ", aantal=" + aantal +
+                ", name='" + name +
+                ", number=" + number +
                 ", isActive=" + isActive +
                 '}';
     }
 
-
-    // getters ans setters
-
+    // getters and setters
     public int getId() {
         return id;
     }
@@ -42,26 +39,28 @@ public class ProductModel {
         this.id = id;
     }
 
-    public String getNaam() { return productNaam; }
-
-    public void setNaam(String productNaam) {
-        this.productNaam = productNaam;
+    public String getName() {
+        return name;
     }
 
-    public int getAantal() {
-        return aantal;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setAantal(int age) {
-        this.aantal = aantal;
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public boolean isActive() {
         return isActive;
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
+    public void setSealed(boolean sealed) {
+        isActive = sealed;
     }
 }
 
