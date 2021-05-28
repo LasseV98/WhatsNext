@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
 
 
     //button voor de plusknop naar een andere xml pagina
-    val button: Button = findViewById(R.id.btn_addItem)
+    val button: Button = findViewById(R.id.Add_Item)
     button.setOnClickListener {
-        startActivity(Intent(this@MainActivity, AddItem::class.java))
+        startActivity(Intent(this@MainActivity, AddItems::class.java))
     }
     }
     //nagaan of je de results krijgt
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-        findViewById<Button>(R.id.btn_addItem).setOnClickListener { view ->
+        findViewById<Button>(R.id.Add_Item).setOnClickListener { view ->
             Snackbar.make(view, "Voeg Item toe", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()}
     }

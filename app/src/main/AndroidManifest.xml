@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsnextHomescreen">
 
+        <activity android:name=".AddItems"></activity>
 
         <activity
             android:name="com.whatsnextfood.whatsnexthomescreen.dummy.loginPagina"

@@ -10,7 +10,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/*
 @SuppressLint("UseSwitchCompatOrMaterialCode")
 public class AddItem extends AppCompatActivity {
     // references to buttons on other controls on the layout
@@ -30,7 +30,7 @@ public class AddItem extends AppCompatActivity {
         et_number = findViewById(R.id.et_number);
         et_name = findViewById(R.id.et_name);
         sw_Active = findViewById(R.id.sw_Sealed);
-        lv_productList =findViewById((R.id.lv_productList));
+        lv_productList = findViewById((R.id.lv_productList));
 
 
         // btn listners
@@ -57,3 +57,4 @@ public class AddItem extends AppCompatActivity {
 
     }
 }
+*/
