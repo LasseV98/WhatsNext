@@ -10,7 +10,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/*
 @SuppressLint("UseSwitchCompatOrMaterialCode")
 public class AddItem extends AppCompatActivity {
     // references to buttons on other controls on the layout
@@ -57,3 +57,4 @@ public class AddItem extends AppCompatActivity {
 
     }
 }
+*/

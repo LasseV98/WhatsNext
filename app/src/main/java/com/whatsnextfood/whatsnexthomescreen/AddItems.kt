@@ -1,5 +1,6 @@
 package com.whatsnextfood.whatsnexthomescreen
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -57,4 +58,30 @@ class AddItems : AppCompatActivity() {
             ).show()
         })
     }
+    // button voor terug te gaan naar main
+
+   /* val button: Button = findViewById(R.id.btn_secondBackHome)
+    button.setOnClickListener {
+        startActivity(Intent(this@AddItems, MainActivity::class.java))
+
+    }
+    */
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.product_toevoegen)
+
+        startActivity(
+            Intent(baseContext, AddItems::class.java).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+        )
+        finish()
+    }
 }
+
+
+
+
+
+
+
+    }
+
