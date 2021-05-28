@@ -18,18 +18,17 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String PRODUCT_TABLE = "PRODUCT_TABLE";
     public static final String COLUMN_PRODUCT_NAAM = "PRODUCT_NAAM";
     public static final String COLUMN_PRODUCT_AANTAL = "PRODUCT_AANTAL";
-    //public static final String COLUMN_PRODUCT_VERVAL = "PRODUCT_VERVAL";
     public static final String COLUMN_VERPAKT_PRODUCT = "VERPAKT_PRODUCT";
     public static final String COLUMN_ID = "ID";
 
     public DataBaseHelper(@Nullable Context context) {
-        super(context, "Products.db", null, 1);               //Versie 2 als vervaldatum erbij komt
+        super(context, "Products.db", null, 2);               //Versie 2 als vervaldatum erbij komt
     }
 
     // this is calls the first time a db is accessed. Code to create a db
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + PRODUCT_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PRODUCT_NAAM + " TEXT, " + COLUMN_PRODUCT_AANTAL + " INT, " +/* COLUMN_PRODUCT_VERVAL + " TEXT, " +*/ COLUMN_VERPAKT_PRODUCT + " BOOL)";
+        String createTableStatement = "CREATE TABLE " + PRODUCT_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PRODUCT_NAAM + " TEXT, " + COLUMN_PRODUCT_AANTAL  + " TEXT, " + COLUMN_VERPAKT_PRODUCT + " BOOL)";
 
         db.execSQL(createTableStatement);
     }
@@ -46,9 +45,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         cv.put(COLUMN_PRODUCT_NAAM, productModel.getProductName());
         cv.put(COLUMN_PRODUCT_AANTAL, productModel.getNumber());
-     //   cv.put(COLUMN_PRODUCT_VERVAL, productModel.getVervaldatum());
         cv.put(COLUMN_VERPAKT_PRODUCT, productModel.isActive());
-
         long insert = db.insert(PRODUCT_TABLE, null, cv);
         if (insert == -1)
             return false;
@@ -89,7 +86,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                int productID= cursor.getInt(0);
                String productName = cursor.getString(1);
                int productNumber = cursor.getInt(2);
-               //String productVerval = cursor.getString(3);
+               String productVerval = cursor.getString(3);
 
                 //Tiernary operator if statment in compacte vorm
 
