@@ -3,8 +3,10 @@ package com.whatsnextfood.whatsnexthomescreen;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -99,7 +101,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                returnList.add(newProduct);
 
 
-           }while (cursor.moveToFirst());
+           }while (cursor.moveToNext());
        }
 
        else {
@@ -111,5 +113,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.close();
         return returnList;
     }
+/*
+    dataBaseHelper = new DataBaseHelper(AddItems.this);
 
+    ProductArrayAdapter = new ArrayAdapter<ProductModel>(AddItems.this, android.R.layout.simple_list_item_1, databasehelper.getAll());
+    lv_productList.setAdapter(ProductArrayAdapter);
+    */
 }
