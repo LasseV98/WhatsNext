@@ -46,7 +46,7 @@ class AddItems : AppCompatActivity() {
                 productModel = ProductModel(-1, "error", 0, false)
             }
             val dataBaseHelper = DataBaseHelper(this@AddItems)
-            val success = dataBaseHelper.addOne(productModel)
+            val success: Boolean? = dataBaseHelper.addOne(productModel)
             Toast.makeText(this@AddItems, "Success$success", Toast.LENGTH_SHORT).show()
         })
 
