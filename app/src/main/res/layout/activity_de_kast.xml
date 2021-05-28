@@ -25,8 +25,15 @@
         android:layout_height="46dp"
         android:background="@android:color/holo_green_dark"
         android:tooltipText="de kast"
-        app:popupTheme="@style/Theme.WhatsnextHomescreen.PopupOverlay" />
-
+        app:popupTheme="@style/Theme.WhatsnextHomescreen.PopupOverlay"
+        tools:ignore="MissingConstraints" />
+    <ListView
+        android:id="@+id/de_kast_listview"
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="51dp"
+        tools:ignore="MissingConstraints"></ListView>
     <TextView
         android:id="@+id/txtKast"
         android:layout_width="wrap_content"
@@ -35,5 +42,8 @@
         android:textSize="25dp"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="17dp" />
+        tools:layout_editor_absoluteY="17dp"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
