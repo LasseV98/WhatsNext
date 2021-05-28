@@ -51,11 +51,12 @@ class AddItems : AppCompatActivity() {
         })
 
         btn_viewAll.setOnClickListener(View.OnClickListener {
-            Toast.makeText(
-                this@AddItems,
-                "View button",
-                Toast.LENGTH_SHORT
-            ).show()
+            val dataBaseHelper = DataBaseHelper(this@AddItems)
+            val all = dataBaseHelper.all
+            val ProductArrayAdapter =
+                ArrayAdapter(this@AddItems, android.R.layout.simple_list_item_1, all)
+                lv_productList.adapter = ProductArrayAdapter
+            //Toast.makeText(this@AddItems, all.toString(), Toast.LENGTH_SHORT).show()
         })
 
         val button: Button = findViewById(R.id.btn_secondBackHome)
