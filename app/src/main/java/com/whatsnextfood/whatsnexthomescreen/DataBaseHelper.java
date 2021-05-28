@@ -52,11 +52,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-    public boolean deleteOne(ProductModel productModel){
-        // find cm in the database. if fount delete it and retun true
+    public boolean deleteOne (ProductModel productModel){
+        // find cm in the database. if found delete it and return true
         // als het niet gevonden is return False
         SQLiteDatabase db = this.getWritableDatabase();
-        String queryString = "Delete FROM" + PRODUCT_TABLE + "where " + COLUMN_ID + " = " + productModel.getId();
+        String queryString = "Delete FROM" + PRODUCT_TABLE + "WHERE " + COLUMN_ID + " = " + productModel.getId();
 
         Cursor cursor = db.rawQuery(queryString, null);
 
