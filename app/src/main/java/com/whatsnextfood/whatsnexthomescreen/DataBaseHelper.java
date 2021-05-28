@@ -70,7 +70,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     public List <ProductModel> getAll(){
-        List<ProductModel>returnList = new ArrayList<>();
+        List<ProductModel> returnList = new ArrayList<>();
 
         //data uit de database
         String queryString = "SELECT * FROM " + PRODUCT_TABLE;
@@ -99,7 +99,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                returnList.add(newProduct);
 
 
-           }while (cursor.moveToNext());
+           }while (cursor.moveToFirst());
        }
 
        else {
