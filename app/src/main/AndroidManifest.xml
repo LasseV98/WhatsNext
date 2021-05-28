@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.whatsnextfood.whatsnexthomescreen">
-    <!--perms vragen voor cam-->
+    <!-- perms vragen voor cam -->
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -12,15 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsnextHomescreen">
+        <activity android:name=".accCreation"></activity>
+        <activity android:name=".Loginpage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".AddItems"></activity>
-
-        <activity
-            android:name="com.whatsnextfood.whatsnexthomescreen.dummy.loginPagina"
-            android:label="@string/title_activity_login"
-            tools:ignore="Instantiatable">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".AddItems" />
+        <activity
+            android:name=".dummy.loginPagina"
+            android:label="@string/title_activity_login"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
