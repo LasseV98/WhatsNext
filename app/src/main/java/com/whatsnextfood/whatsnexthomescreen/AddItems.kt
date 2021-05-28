@@ -63,7 +63,6 @@ class AddItems : AppCompatActivity() {
             startActivity(Intent(this@AddItems, MainActivity::class.java))
         }
 
-
     }
 
 
