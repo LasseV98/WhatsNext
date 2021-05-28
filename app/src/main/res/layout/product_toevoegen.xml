@@ -40,8 +40,8 @@
         android:id="@+id/sw_Sealed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:text="productSealed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_number" />
@@ -50,10 +50,10 @@
         android:id="@+id/btn_viewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:backgroundTint="@android:color/holo_green_dark"
+        android:layout_marginTop="12dp"
         android:background="@android:color/holo_green_dark"
         android:text="vieuw All"
+        app:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sw_Sealed" />
@@ -69,16 +69,16 @@
         app:backgroundTint="@android:color/holo_green_dark"
         android:background="@android:color/holo_green_dark"/>
 
+
     <ListView
         android:id="@+id/lv_productList"
-        android:layout_width="410dp"
-        android:layout_height="436dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="416dp"
+        android:layout_height="359dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_viewAll" />
-
 
     <Button
         android:id="@+id/btn_secondBackHome"
@@ -91,5 +91,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:backgroundTint="@android:color/holo_green_dark"
         android:background="@android:color/holo_green_dark"/>
+
+    <EditText
+        android:id="@+id/et_verval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/datumveld"
+        android:inputType="date"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

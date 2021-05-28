@@ -14,5 +14,6 @@ class DeKast : AppCompatActivity() {
         val button: Button = findViewById(R.id.btn_kastBackHome2)
         button.setOnClickListener {
             startActivity(Intent(this@DeKast, MainActivity::class.java))
+        }
     }
 }

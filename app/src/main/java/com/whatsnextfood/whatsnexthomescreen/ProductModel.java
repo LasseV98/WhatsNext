@@ -4,19 +4,18 @@ public class ProductModel {
 
     private int id;
     private String productName;
+    //private String vervaldatum;
     private int number;
     private boolean isActive;
 
     //constructors
 
-    public ProductModel(int id, String productName, int number, boolean isActive) {
+    public ProductModel(int id, String productName, int number, /*String vervaldatum,*/ boolean isActive) {
         this.id = id;
         this.productName = productName;
         this.number = number;
+      //  this.vervaldatum = vervaldatum;
         this.isActive = isActive;
-    }
-
-    public ProductModel() {
     }
 
     //toString is necessary for printing the contents of a class object
@@ -27,6 +26,7 @@ public class ProductModel {
                 "id=" + id +
                 ", name='" + productName + '\'' +
                 ", number=" + number +
+            /*    ", name='" + vervaldatum + '\'' +*/
                 ", isActive=" + isActive +
                 '}';
 
@@ -56,7 +56,15 @@ public class ProductModel {
     public void setNumber(int number) {
         this.number = number;
     }
+/*
+    public String getVervaldatum() {
+        return vervaldatum;
+    }
 
+    public void setVervaldatum(String vervaldatum) {
+        this.vervaldatum = vervaldatum;
+    }
+*/
     public boolean isActive() {
         return isActive;
     }

@@ -18,6 +18,7 @@ class AddItems : AppCompatActivity() {
         var btn_add: Button? = null
         var btn_viewAll: Button? = null
         var et_name: EditText? = null
+        //var et_vervaldatum: EditText? = null
         var et_number:EditText? = null
         var sw_Active: Switch? = null
         var lv_productList: ListView? = null
@@ -38,6 +39,7 @@ class AddItems : AppCompatActivity() {
         btn_add = findViewById<Button>(R.id.btn_add)
         btn_viewAll = findViewById<Button>(R.id.btn_viewAll)
         et_number = findViewById<EditText>(R.id.et_number)
+        // et_vervaldatum = findViewById<EditText>(R.id.et_verval)
         et_name = findViewById<EditText>(R.id.et_name)
         sw_Active = findViewById<Switch>(R.id.sw_Sealed)
         lv_productList = findViewById<ListView>(R.id.lv_productList)
@@ -51,12 +53,13 @@ class AddItems : AppCompatActivity() {
                     -1,
                     et_name.getText().toString(),
                     et_number.getText().toString().toInt(),
+           //         et_vervaldatum.getText().toString(),
                     sw_Active.isChecked()
                 )
                 Toast.makeText(this@AddItems, productModel.toString(), Toast.LENGTH_SHORT).show()
             } catch (e: Exception) {
                 Toast.makeText(this@AddItems, "Error creating Product", Toast.LENGTH_SHORT).show()
-                productModel = ProductModel(-1, "error", 0, false)
+                productModel = ProductModel(-1, "error", 0, /* "error", */false)
             }
             val dataBaseHelper = DataBaseHelper(this@AddItems)
             val success: Boolean? = dataBaseHelper.addOne(productModel)
@@ -71,7 +74,7 @@ class AddItems : AppCompatActivity() {
             //Toast.makeText(this@AddItems, all.toString(), Toast.LENGTH_SHORT).show()
         })
 
-        val button: Button = findViewById(R.id.btn_secondBackHome)
+        val button: Button = findViewById(R.id.Add_Item)
         button.setOnClickListener {
             startActivity(Intent(this@AddItems, MainActivity::class.java))
         }

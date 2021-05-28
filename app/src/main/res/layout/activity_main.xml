@@ -52,14 +52,5 @@
         android:background="@android:color/holo_green_dark"
         app:popupTheme="@style/Theme.WhatsnextHomescreen.PopupOverlay" />
 
-    <Button
-        android:id="@+id/btn_kast"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@android:color/holo_green_dark"
-
-        android:text="Button" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
