@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         app:backgroundTint="@android:color/holo_green_dark"
 
-        android:text="Button" />
+        android:text="@string/btn_kast" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
