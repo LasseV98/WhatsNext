@@ -40,12 +40,18 @@ class MainActivity : AppCompatActivity() {
             scanfunctie.initiateScan()
         }
 
-
+// buttons naar pagina's
     //button voor de plusknop naar een andere xml pagina
+
     val button: Button = findViewById(R.id.Add_Item)
     button.setOnClickListener {
         startActivity(Intent(this@MainActivity, AddItems::class.java))
-    }
+
+
+        //button naar pagina kast
+
+
+        }
     }
     //nagaan of je de results krijgt
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -98,3 +104,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
