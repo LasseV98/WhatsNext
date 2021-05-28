@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
-        android:text="productSealed"
+        android:text="@string/productsealedveld"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_number" />
 
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@android:color/holo_green_dark"
-        android:text="vieuw All"
+        android:text="@string/vieuw_allveld"
         app:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="@string/addveld"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_viewAll"
         app:layout_constraintTop_toTopOf="@+id/btn_viewAll"
