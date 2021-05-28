@@ -57,31 +57,14 @@ class AddItems : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         })
-    }
-    // button voor terug te gaan naar main
 
-   /* val button: Button = findViewById(R.id.btn_secondBackHome)
-    button.setOnClickListener {
-        startActivity(Intent(this@AddItems, MainActivity::class.java))
+        val button: Button = findViewById(R.id.btn_secondBackHome)
+        button.setOnClickListener {
+            startActivity(Intent(this@AddItems, MainActivity::class.java))
+        }
+
 
     }
-    */
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.product_toevoegen)
 
-        startActivity(
-            Intent(baseContext, AddItems::class.java).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-        )
-        finish()
-    }
+
 }
-
-
-
-
-
-
-
-    }
-
