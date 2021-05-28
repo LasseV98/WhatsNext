@@ -1,11 +1,15 @@
 package com.whatsnextfood.whatsnexthomescreen
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.*
+
+
 
 class accCreation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,10 +19,10 @@ class accCreation : AppCompatActivity() {
     }
 
     lateinit var etFirstName: EditText
-    lateinit var etLastName:EditText
+    lateinit var etLastName: EditText
     lateinit var etEmail: EditText
-    lateinit var etPassword:EditText
-    lateinit var etRepeatPassword:EditText
+    lateinit var etPassword: EditText
+    lateinit var etRepeatPassword: EditText
     val MIN_PASSWORD_LENGTH = 6;
 
 
@@ -82,7 +86,7 @@ class accCreation : AppCompatActivity() {
 
     // Hook Click Event
 
-    fun performSignUp (view: View) {
+    fun performSignUp(view: View) {
         if (validateInput()) {
 
             // Input is valid, here send data to your server
@@ -93,10 +97,11 @@ class accCreation : AppCompatActivity() {
             val password = etPassword.text.toString()
             val repeatPassword = etRepeatPassword.text.toString()
 
-            Toast.makeText(this,"Login Success",Toast.LENGTH_SHORT).show()
-            // Here you can call you API
+            Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+            // hier database connecten
+
 
         }
-    }
 
+    }
 }
