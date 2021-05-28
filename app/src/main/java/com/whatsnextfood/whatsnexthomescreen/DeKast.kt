@@ -15,4 +15,4 @@ class DeKast : AppCompatActivity() {
         button.setOnClickListener {
             startActivity(Intent(this@DeKast, MainActivity::class.java))
     }
-}
+}}
