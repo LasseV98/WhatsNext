@@ -72,6 +72,7 @@
     <string name="btn_viewAll">view All</string>
     <string name="btn_addItem">+</string>
     <string name="btn_kast">Kast</string>
+    <string name="txt_Welkom">Welkom</string>
 
 
 </resources>

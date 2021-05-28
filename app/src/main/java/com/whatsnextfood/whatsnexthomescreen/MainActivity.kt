@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
 // buttons naar pagina's
     //button voor de plusknop naar een andere xml pagina
+
     val button: Button = findViewById(R.id.Add_Item)
     button.setOnClickListener {
         startActivity(Intent(this@MainActivity, AddItems::class.java))
@@ -49,20 +50,18 @@ class MainActivity : AppCompatActivity() {
 
         //button naar pagina kast
 
-        val button: Button = findViewById(R.id.btn_kast)
-        button.setOnClickListener {
-            startActivity(Intent(this@MainActivity, DeKast::class.java))
+
         }
     }
     //nagaan of je de results krijgt
-     fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         var camerafunctie = findViewById<ImageButton>(R.id.Cam)
         if(requestCode == 111 && grantResults[0]==PackageManager.PERMISSION_GRANTED)
             camerafunctie.isEnabled= true
     }
 
-     fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         var result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data)
         if(result==null){
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-     fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         findViewById<Button>(R.id.Add_Item).setOnClickListener { view ->
             Snackbar.make(view, "Voeg Item toe", Snackbar.LENGTH_LONG)
@@ -84,13 +83,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-     fun onCreateOptionsMenu(menu: Menu): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
-     fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -105,4 +104,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-}
+
