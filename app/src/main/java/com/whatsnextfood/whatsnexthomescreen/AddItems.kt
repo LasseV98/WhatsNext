@@ -16,11 +16,24 @@ class AddItems : AppCompatActivity() {
         setContentView(R.layout.product_toevoegen)
 
         var btn_add: Button? = null
-        var btn_viewAll:android.widget.Button? = null
+        var btn_viewAll: Button? = null
         var et_name: EditText? = null
         var et_number:EditText? = null
         var sw_Active: Switch? = null
         var lv_productList: ListView? = null
+        var ProductArrayAdapter: Adapter? = null
+        var dataBaseHelper: DataBaseHelper? = null
+
+        dataBaseHelper = DataBaseHelper(this@AddItems)
+
+
+        ProductArrayAdapter = ArrayAdapter(this@AddItems, android.R.layout.simple_list_item_1, dataBaseHelper.getAll())
+
+        if (lv_productList != null) {
+            lv_productList.setAdapter(ProductArrayAdapter)
+        }
+
+
 
         btn_add = findViewById<Button>(R.id.btn_add)
         btn_viewAll = findViewById<Button>(R.id.btn_viewAll)
@@ -53,8 +66,7 @@ class AddItems : AppCompatActivity() {
         btn_viewAll.setOnClickListener(View.OnClickListener {
             val dataBaseHelper = DataBaseHelper(this@AddItems)
             val all = dataBaseHelper.all
-            val ProductArrayAdapter =
-                ArrayAdapter(this@AddItems, android.R.layout.simple_list_item_1, all)
+            val ProductArrayAdapter = ArrayAdapter(this@AddItems, android.R.layout.simple_list_item_1, all)
                 lv_productList.adapter = ProductArrayAdapter
             //Toast.makeText(this@AddItems, all.toString(), Toast.LENGTH_SHORT).show()
         })

@@ -114,7 +114,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return returnList;
     }
 /*
-    dataBaseHelper = new DataBaseHelper(AddItems.this);
+    DataBaseHelper dataBaseHelper = new DataBaseHelper(AddItems.this);
 
     ProductArrayAdapter = new ArrayAdapter<ProductModel>(AddItems.this, android.R.layout.simple_list_item_1, databasehelper.getAll());
     lv_productList.setAdapter(ProductArrayAdapter);
