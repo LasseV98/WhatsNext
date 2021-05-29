@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 
+
 class DeKast : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +24,7 @@ class DeKast : AppCompatActivity() {
 
             val ListView = findViewById<ListView>(R.id.de_kast_listview)
 
-            ListView.adapter = MyCustomAdapter(this) // this needs to be my custum adapter telling my list what to render
+            ListView.adapter = MyCustomAdapter(this) // this needs to be my custom adapter telling my list what to render
 
 
     }
