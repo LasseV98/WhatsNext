@@ -42,7 +42,12 @@ class MainActivity : AppCompatActivity() {
 
 // buttons naar pagina's
     //button voor de plusknop naar een andere xml pagina
-
+    //knop naar kast
+    val kastknop: Button=findViewById(R.id.btn_kast)
+    kastknop.setOnClickListener{
+        startActivity(Intent(this@MainActivity,DeKast::class.java))
+    }
+    //knop naar addItems
     val button: Button = findViewById(R.id.Add_Item)
     button.setOnClickListener {
         startActivity(Intent(this@MainActivity, AddItems::class.java))
