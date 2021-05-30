@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 // buttons naar pagina's
-    //button voor de plusknop naar een andere xml pagina
+    //button voor de plusknop naar een andere xml pagina.
     //knop naar kast.
     val kastknop: Button=findViewById(R.id.btn_kast)
     kastknop.setOnClickListener{
