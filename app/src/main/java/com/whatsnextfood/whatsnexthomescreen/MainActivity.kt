@@ -18,7 +18,7 @@ import com.google.zxing.integration.android.IntentIntegrator
 class MainActivity : AppCompatActivity() {
 
 
-//permissions vragen en scan aanzetten
+//permissions vragen en scan aanzetten.
  override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
