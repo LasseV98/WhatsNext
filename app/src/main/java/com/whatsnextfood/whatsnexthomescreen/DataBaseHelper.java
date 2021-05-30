@@ -22,13 +22,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ID = "ID";
 
     public DataBaseHelper(@Nullable Context context) {
-        super(context, "Products.db", null, 1);
+        super(context, "Products.db", null, 2);               //Versie 2 als vervaldatum erbij komt
     }
 
     // this is calls the first time a db is accessed. Code to create a db
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + PRODUCT_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PRODUCT_NAAM + " TEXT, " + COLUMN_PRODUCT_AANTAL + " INT, " + COLUMN_VERPAKT_PRODUCT + " BOOL)";
+        String createTableStatement = "CREATE TABLE " + PRODUCT_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PRODUCT_NAAM + " TEXT, " + COLUMN_PRODUCT_AANTAL  + " TEXT, " + COLUMN_VERPAKT_PRODUCT + " BOOL)";
 
         db.execSQL(createTableStatement);
     }
@@ -46,7 +46,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_PRODUCT_NAAM, productModel.getProductName());
         cv.put(COLUMN_PRODUCT_AANTAL, productModel.getNumber());
         cv.put(COLUMN_VERPAKT_PRODUCT, productModel.isActive());
-
         long insert = db.insert(PRODUCT_TABLE, null, cv);
         if (insert == -1)
             return false;
@@ -87,6 +86,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                int productID= cursor.getInt(0);
                String productName = cursor.getString(1);
                int productNumber = cursor.getInt(2);
+               String productVerval = cursor.getString(3);
 
                 //Tiernary operator if statment in compacte vorm
 
@@ -95,9 +95,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
                // else{
                // variable = Expression3;}
-               boolean productVerpakt = cursor.getInt(3) == 1? true: false;
+               boolean productVerpakt = cursor.getInt(3) == 1? true: false;         // Dit dan ook veranderen naar 4
 
-               ProductModel newProduct = new ProductModel(productID, productName,productNumber, productVerpakt);
+               ProductModel newProduct = new ProductModel(productID, productName,productNumber,/*productVerval,*/ productVerpakt);
                returnList.add(newProduct);
 
 

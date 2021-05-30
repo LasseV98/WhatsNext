@@ -57,8 +57,6 @@ class AddItems : AppCompatActivity() {
             } catch (e: Exception) {
                 Toast.makeText(this@AddItems, "Error creating Product", Toast.LENGTH_SHORT).show()
                 productModel = ProductModel(-1, "error", 0, false)
-                        // view all naar kast laten vloeien?
-                //startActivity(Intent(this@AddItems, DeKast::class.java))
             }
             val dataBaseHelper = DataBaseHelper(this@AddItems)
             val success: Boolean? = dataBaseHelper.addOne(productModel)
